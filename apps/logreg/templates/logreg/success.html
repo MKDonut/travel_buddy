@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Success</title>
+	<style>
+		h3{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	{% if messages %}
+		{% for message in messages %}
+		<h3>{{message}}</h3>
+		{% endfor %}
+	{% endif %}
+	<a href="{% url 'my_users:logout' %}">Logout</a>
+	<a href="{% url 'my_courses:adduser' %}"><button>View Courses</button></a>
+	<h3>View Some Other Projects!</h3>
+	<a href="{% url 'my_randomword:index' %}"><button>Random Word Project</button></a>
+	<a href="{% url 'my_timedisplay:index' %}"><button>Date Time Display</button></a>
+	<a href="{% url 'my_survey:index' %}"><button>Survey</button></a>
+</body>
+</html>
